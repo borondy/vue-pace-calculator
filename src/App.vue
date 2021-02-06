@@ -1,20 +1,26 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png" />
-    <HelloWorld msg="Welcome to Your Vue.js + TypeScript App" />
+    <Main/>
   </div>
 </template>
 
 <script lang="ts">
+import { BootstrapVue} from 'bootstrap-vue'
 import { Component, Vue } from "vue-property-decorator";
-import HelloWorld from "./components/HelloWorld.vue";
+import Main from "./components/Main.vue";
 
+import 'bootstrap/dist/css/bootstrap.min.css'
+import 'bootstrap-vue/dist/bootstrap-vue.min.css'
+
+Vue.use(BootstrapVue);
 @Component({
   components: {
-    HelloWorld
+    Main
   }
 })
-export default class App extends Vue {}
+export default class App extends Vue {
+  
+}
 </script>
 
 <style>
